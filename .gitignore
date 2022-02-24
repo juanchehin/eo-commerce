@@ -24,6 +24,8 @@ modules/.settings
 modules/.vscode
 .vimrc
 .nvimrc
+eo-front/.vscode
+eo-dashboard/.vscode
 
 # Don't check in secret files
 *secret.js
