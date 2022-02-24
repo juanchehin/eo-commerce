@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { SharedModule } from '../shared/shared.module';
 
-
-const pagesRoutes: Routes = [
-  // Mantenimiento SIGEPE
-  { path: '', component: HomeComponent },
-  // Barrios
-  // { path: 'barrios', component: BarriosComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' }
-]
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  }
+];
 
 @NgModule({
-  imports: [ RouterModule.forChild(mantenimientoRoutes) ],
-  exports: [ RouterModule ]
+  imports: [
+    CommonModule,
+    FormsModule,
+    SharedModule,
+    RouterModule.forChild(routes)
+  ],
+  declarations: [HomeComponent]
 })
-export class MantenimietoRoutesModule { }
+export class PagesModule {}

@@ -26,6 +26,7 @@ modules/.vscode
 .nvimrc
 eo-front/.vscode
 eo-dashboard/.vscode
+eo-front/.angular
 
 # Don't check in secret files
 *secret.js
