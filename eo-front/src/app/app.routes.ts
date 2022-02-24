@@ -11,12 +11,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
+  },
+  {
+    path: 'account',
+    // canActivate: [LoginGuard, AdminGuard,VerificaTokenGuard],
+    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
   }
-  // {
-  //   path: 'personas',
-  //   canActivate: [LoginGuard, AdminGuard,VerificaTokenGuard],
-  //   loadChildren: () => import('./paginas/personas/personas.module').then( m => m.PersonasModule )
-  // }
 ];
 
 @NgModule({

@@ -4,11 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from '../shared/shared.module';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'account',
+    component: AccountComponent
   }
 ];
 
@@ -19,6 +24,9 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent]
+  declarations: [
+    HomeComponent,
+    AccountComponent
+  ]
 })
 export class PagesModule {}
